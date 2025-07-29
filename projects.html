@@ -16,16 +16,45 @@ body {
       text-align: center;
     }
     .normal {
-      font-size: 50px;
+      font-size: 30px;
       margin-top: 5px;
+      text-align: center;
     }
-.row {
-  display: flex;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
-.column {
-  flex: 50%;
-  text-align: left;
+li {
+  float: center;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+#TEXTE{
+position: relative;
+padding-top: 200px;
+}
+#LIVE{
+position: relative;
+padding-top: 200px;
+}
+#FILM{
+position: relative;
+padding-top: 200px;
+}
 }
   </style>
 </head>
@@ -38,34 +67,40 @@ body {
     transform: translateX(-50%);
     font-family: Helvetica, Arial, sans-serif;
     text-decoration: none;
+    align-items: center;
     color: #fb3f00;
+    background-color: #FFFFFF;
   ">
     <b>ULRICH KRISCHTAN</b>
   </a>
   <br>
 </div>
 <div class="header">
-  <b>projects</b>
+  <b>PROJECTS</b>
 </div>
 <div class="normal">
- <div class="row">
-  <div class="column"><b>Live</b></div>
-  <div class="column"><b>Texte</b></div>
-  <div class="column"><b>Film</b></div>
+<ul>
+  <li><a class="active" href="#TEXTE"><b>TEXTE</b></a></li>
+  <li><a class="active" href="#LIVE"><b>LIVE</b></a></li>
+  <li><a class="active" href="#FILM"><b>FILM</b></a></li>
+</ul>
 </div>
-<div class="row">
-  <div class="column">
-    <a href="https://www.instagram.com/p/DMamdxCMV8g/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank">Infoveranstaltung (27.07.2025)</a></div>
-  <div class="column"><a href="https://www.liberladen.org/product/kollektive-literaturzeitschrift-wuerzburg-15/" target="_blank">Stimmt So (KLW)</a></div>
-  <div class="column"><i>coming soon</i></div>
-</div>
-<div class="row">
-  <div class="column">
-    <a href="https://www.instagram.com/stories/highlights/18052153532381267/" target="_blank">Drehbuchklasse Lesung (09.07.2025)</a></div>
-  <div class="column"><a href="https://www.literarische-blaetter.de/jahrgang-2025/mai-2025/" target="_blank">Baumarkt (Literarische Blätter)</a></div>
-  <div class="column"></div>
-</div>
-</div>
+<br>
+<br>
+<h2 class="header" id="TEXTE">TEXTE</h2>
+<div class="normal">
+<a href="https://www.literarische-blaetter.de/jahrgang-2025/mai-2025/" target="_blank">Baumarkt (Literarische Blätter)</a>
+<br>
+<br>
+<a href="https://www.liberladen.org/product/kollektive-literaturzeitschrift-wuerzburg-15/" target="_blank">Stimmt So (KLW)</a></div>
+<h2 class="header" id="LIVE">LIVE</h2>
+<div class="normal">
+<a href="https://www.instagram.com/p/DMamdxCMV8g/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank">Infoveranstaltung (27.07.2025)</a>
+<br>
+<br>
+<a href="https://www.instagram.com/stories/highlights/18052153532381267/" target="_blank">Drehbuchklasse Lesung (09.07.2025)</a></div>
+<h2 class="header" id="FILM">FILM</h2>
+<div class="normal"><i>coming soon</i></div>
 <br>
 <br>
   <a href="impressum.html">impressum&datenschutz</a>
