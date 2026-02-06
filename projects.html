@@ -1,118 +1,267 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-	<meta charset="UTF-8">
-	<title>Ulrich Krischtan</title>
-	  <style>
-
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 40px;
-  }
-
-    .header {
-      margin-bottom: 80px;
-      font-size: 90px;
-      text-align: center;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ulrich Krischtan - Projects</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .normal {
-      font-size: 30px;
-      margin-top: 5px;
-      text-align: center;
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
 
-li {
-  float: center;
-}
+    /* Fixed header */
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      z-index: 100;
+      padding: 15px 20px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 40px 40px;
-  text-decoration: none;
-}
+    .fixed-header a {
+      font-family: Helvetica, Arial, sans-serif;
+      text-decoration: none;
+      color: #fb3f00;
+      font-size: clamp(24px, 5vw, 50px);
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
 
-li a:hover {
-  background-color: #111;
-}
-#TEXTE{
-position: relative;
-padding-top: 200px;
-}
-#LIVE{
-position: relative;
-padding-top: 200px;
-}
-#FILM{
-position: relative;
-padding-top: 200px;
-}
-}
+    /* Main content */
+    .main-content {
+      margin-top: 100px;
+      max-width: 1200px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      flex: 1;
+    }
+
+    .page-title {
+      font-size: clamp(40px, 8vw, 90px);
+      text-align: center;
+      margin-bottom: 60px;
+      font-weight: bold;
+    }
+
+    /* Section styling */
+    .section {
+      margin-bottom: 100px;
+    }
+
+    .section-title {
+      font-size: clamp(50px, 7vw, 90px);
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+
+    .section-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .project-card {
+      background: #f8f8f8;
+      padding: 30px;
+      border-radius: 8px;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .project-card:hover {
+      background: #fff;
+      border-color: #fb3f00;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card a {
+      color: #000;
+      text-decoration: none;
+      display: block;
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .project-card .venue {
+      color: #666;
+      font-size: clamp(14px, 2vw, 18px);
+      font-style: italic;
+    }
+
+    .section-content i {
+      color: #666;
+      font-size: clamp(20px, 3vw, 30px);
+    }
+
+    /* Back to top button */
+    .back-home {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: clamp(16px, 2vw, 24px);
+      text-decoration: none;
+      color: #fb3f00;
+      background: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      border: 2px solid #fb3f00;
+      transition: all 0.3s;
+      z-index: 90;
+    }
+
+    .back-home:hover {
+      background: #fb3f00;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(251, 63, 0, 0.3);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fb3f00;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .main-content {
+        margin-top: 80px;
+        padding: 15px;
+      }
+
+      .section {
+        margin-bottom: 80px;
+      }
+
+      .section-content {
+        line-height: 1.6;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .project-card {
+        padding: 25px;
+      }
+
+      .back-home {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .fixed-header {
+        padding: 10px 15px;
+      }
+
+      .main-content {
+        margin-top: 70px;
+        padding: 10px;
+      }
+
+      .section {
+        margin-bottom: 60px;
+      }
+
+      .back-home {
+        font-size: 14px;
+        padding: 8px 14px;
+        bottom: 10px;
+        right: 10px;
+      }
+    }
   </style>
 </head>
 <body>
-<div class="header">
-  <a href="index.html" style="
+  <header class="fixed-header">
+    <a href="index.html">ULRICH KRISCHTAN</a>
+  </header>
 
-    font-family: Helvetica, Arial, sans-serif;
-    text-decoration: none;
-    text-align: center;
-    align-items: center;
-    color: #fb3f00;
-    background-color: #FFFFFF;
-  ">
-    <b>ULRICH KRISCHTAN</b>
-  </a>
-  <br>
-</div>
-<div class="header">
-  <b>PROJECTS</b>
-</div>
-<div class="normal">
-<ul>
-  <li><a class="active" href="#TEXTE"><b>TEXTE</b></a></li>
-  <li><a class="active" href="#LIVE"><b>LIVE</b></a></li>
-  <li><a class="active" href="#FILM"><b>FILM</b></a></li>
-</ul>
-</div>
-<br>
-<br>
-<h2 class="header" id="TEXTE">TEXTE</h2>
-<div class="normal">
-<a href="https://www.literarische-blaetter.de/jahrgang-2025/mai-2025/" target="_blank">Baumarkt (Literarische Blätter)</a>
-<br>
-<br>
-<a href="https://www.liberladen.org/product/kollektive-literaturzeitschrift-wuerzburg-15/" target="_blank">Stimmt So (KLW)</a><br>
-<br>
-<a href="https://literaturzeitschrift-karussell.de/shop/verboten/" target="_blank">Schublade (Karussell)</a></div>
-<h2 class="header" id="LIVE">LIVE</h2>
-<div class="normal">
-<a href="https://www.instagram.com/p/DMamdxCMV8g/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank">Infoveranstaltung (27.07.2025)</a>
-<br>
-<br>
-<a href="https://www.instagram.com/stories/highlights/18052153532381267/" target="_blank">Drehbuchklasse Lesung (09.07.2025)</a></div>
-<h2 class="header" id="FILM">FILM</h2>
-<div class="normal"><i>coming soon</i></div>
-<br>
-<br>
-<a href="#top" style="
-  position: fixed;
-  bottom: 10px;
-  left: 80%;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 30px;
-  text-decoration: none;
-">
-  back home
-</a>
-  <a href="impressum.html">impressum&datenschutz</a>
+  <main class="main-content">
+    <h1 class="page-title">PROJECTS</h1>
+
+    <section class="section" id="TEXTE">
+      <h2 class="section-title">TEXTE</h2>
+      <div class="section-content">
+        <div class="project-card">
+          <a href="https://www.literarische-blaetter.de/jahrgang-2025/mai-2025/" target="_blank">Baumarkt</a>
+          <div class="venue">Literarische Blätter</div>
+        </div>
+        <div class="project-card">
+          <a href="https://www.liberladen.org/product/kollektive-literaturzeitschrift-wuerzburg-15/" target="_blank">Stimmt So</a>
+          <div class="venue">KLW</div>
+        </div>
+        <div class="project-card">
+          <a href="https://literaturzeitschrift-karussell.de/shop/verboten/" target="_blank">Schublade</a>
+          <div class="venue">Karussell</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="LIVE">
+      <h2 class="section-title">LIVE</h2>
+      <div class="section-content">
+        <div class="project-card">
+          <a href="https://www.instagram.com/p/DMamdxCMV8g/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank">Infoveranstaltung</a>
+          <div class="venue">27.07.2025</div>
+        </div>
+        <div class="project-card">
+          <a href="https://www.instagram.com/stories/highlights/18052153532381267/" target="_blank">Drehbuchklasse Lesung</a>
+          <div class="venue">09.07.2025</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="FILM">
+      <h2 class="section-title">FILM</h2>
+      <div class="section-content" style="text-align: center;">
+        <i>coming soon</i>
+      </div>
+    </section>
+  </main>
+
+  <a href="index.html" class="back-home">← back home</a>
+
+  <footer>
+    <a href="impressum.html">impressum&datenschutz</a>
+  </footer>
 </body>
 </html>
