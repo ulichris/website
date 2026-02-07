@@ -1,54 +1,186 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-	<meta charset="UTF-8">
-	<title>Ulrich Krischtan</title>
-	  <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ulrich Krischtan - Bio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 40px;
-  }
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      padding: 10px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-    .header {
-      margin-bottom: 80px;
-      font-size: 90px;
+    /* Fixed header */
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      z-index: 100;
+      padding: 15px 20px;
       text-align: center;
+      border-bottom: 1px solid #eee;
     }
-    .normal {
-      font-size: 50px;
-      margin-top: 5px;
+
+    .fixed-header a {
+      font-family: Helvetica, Arial, sans-serif;
+      text-decoration: none;
+      color: #fb3f00;
+      font-size: clamp(24px, 5vw, 50px);
+      font-weight: bold;
+      letter-spacing: 1px;
     }
-    .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 10%;
-	}
+
+    /* Main content */
+    .main-content {
+      margin-top: 100px;
+      max-width: 1000px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      flex: 1;
+    }
+
+    .bio-list {
+      list-style: none;
+      line-height: 1.5;
+    }
+
+    .bio-list li {
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .bio-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #fb3f00;
+    }
+
+    .bio-list i {
+      font-style: italic;
+      color: #666;
+      font-size: 0.8em;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+        /* Back to top button */
+    .back-home {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: clamp(16px, 2vw, 24px);
+      text-decoration: none;
+      color: #fb3f00;
+      background: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      border: 2px solid #fb3f00;
+      transition: all 0.3s;
+      z-index: 90;
+    }
+
+    .back-home:hover {
+      background: #fb3f00;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(251, 63, 0, 0.3);
+    }
+
+    footer a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fb3f00;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .main-content {
+        margin-top: 80px;
+        padding: 15px;
+      }
+
+      .bio-list {
+        line-height: 1.4;
+      }
+
+      .bio-list li {
+        margin-bottom: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .fixed-header {
+        padding: 10px 15px;
+      }
+
+      .main-content {
+        margin-top: 70px;
+        padding: 10px;
+      }
+
+      .bio-list li {
+        margin-bottom: 12px;
+        padding-left: 15px;
+      }
+    }
   </style>
 </head>
 <body>
-<div class="header">
-  <a href="index.html" style="
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: Helvetica, Arial, sans-serif;
-    text-decoration: none;
-    color: #fb3f00;
-  ">
-    <b>ULRICH KRISCHTAN</b>
-  </a>
-  <br>
-  <br>
-</div>
-<ul class="normal">
-<li>*2001</li>
-<li>Jungstudium Jazzposaune <i>HMDK Stuttgart (2019-2020)</i></li>
-<li>Philosophie/Sozialwissenschaften <i>HU Berlin (2021-2024)</i></li>
-<li>Drehbuch/Dramaturgie <i>Filmuni Babelsberg (seit 2024)</i></li>
-</ul>
-  <a href="impressum.html">impressum&datenschutz</a>
+  <header class="fixed-header">
+    <a href="index.html">ULRICH KRISCHTAN</a>
+  </header>
+
+  <main class="main-content">
+    <h1>BIO</h1>
+    <h2>deutsch</h2>
+    <p>Ulrich Krischtan ist Autor und Filmemacher. Er lebt und arbeitet in Berlin. Mehrere seiner Kurzgeschichten wurden veröffentlicht. Aktuell ist er als Autor, Produzent und Regisseur an der Produktion verschiedener Kurzfilme tätig. Er studiert im Studiengang Drehbuch/Dramaturgie an der Filmuniversität Babelsberg Konrad Wolf.
+    </p>
+    <br />
+    <h2>english</h2>
+    <p>Ulrich Krischtan is a writer and filmmaker, working and living in Berlin. Multiple short stories of his have been published. He is currently working as  author, producer, and director on different short films. He studies screenwriting at Filmuniversity Babelsberg Konrad Wolf.
+    </p>
+    <br />
+    <br />
+    <ul class="bio-list">
+      <li>*2001</li>
+      <li>Jungstudium Jazzposaune (Pre-Studies Jazz Trombone) <i>HMDK Stuttgart (2019-2020)</i></li>
+      <li>Philosophie/Sozialwissenschaften (Philosophy/Social Studies) <i>HU Berlin (2021-2024)</i></li>
+      <li>Drehbuch/Dramaturgie (Screenwriting) <i>Filmuni Babelsberg (seit/since 2024)</i></li>
+    </ul>
+
+<a href="index.html" class="back-home">← back home</a>
+
+  </main>
+
+  <footer>
+    <a href="impressum.html">impressum&datenschutz</a>
+  </footer>
 </body>
 </html>

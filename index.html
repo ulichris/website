@@ -2,58 +2,200 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ulrich Krischtan</title>
   <style>
-     .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 10%;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 40px;
-  }
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-    .header {
-      margin-bottom: 80px;
-      font-size: 90px;
+    /* Fixed header */
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      z-index: 100;
+      padding: 15px 20px;
       text-align: center;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    .fixed-header.scrolled {
+      border-bottom-color: #eee;
+    }
+
+    .fixed-header a {
+      font-family: Helvetica, Arial, sans-serif;
+      text-decoration: none;
+      color: #fb3f00;
+      font-size: clamp(24px, 5vw, 50px);
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Main content */
+    .main-content {
+      margin-top: 80px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+    }
+
+    .image-container {
+      width: 100%;
+      max-width: 150px;
+      margin: 20px 0;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Navigation links */
+    .nav-links {
+      text-align: center;
+      font-size: clamp(40px, 8vw, 90px);
+      line-height: 1.4;
+    }
+
+    .nav-links a {
+      display: block;
+      text-decoration: none;
+      color: #000;
+      transition: color 0.3s, transform 0.2s;
+      margin: 10px 0;
+    }
+
+    .nav-links a:hover {
+      color: #fb3f00;
+      transform: translateX(10px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fb3f00;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .main-content {
+        margin-top: 60px;
+        gap: 30px;
+      }
+
+      .nav-links {
+        line-height: 1.3;
+      }
+
+      .image-container {
+        max-width: 120px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .fixed-header {
+        padding: 10px 15px;
+      }
+
+      .main-content {
+        gap: 20px;
+      }
+
+      .image-container {
+        max-width: 100px;
+      }
+    }
+            /* Instagram button */
+    .instagram {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      font-size: clamp(16px, 2vw, 24px);
+      text-decoration: none;
+      color: #8a3ab9;
+      background: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      border: 2px solid #8a3ab9;
+      transition: all 0.3s;
+      z-index: 90;
+    }
+
+    .instagram:hover {
+      background: #8a3ab9;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(251, 63, 0, 0.3);
     }
   </style>
 </head>
 <body>
-<div class="header">
-  <a href="#top" style="
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: Helvetica, Arial, sans-serif;
-    text-decoration: none;
-    color: #fb3f00;
-  ">
-    <b>ULRICH KRISCHTAN</b>
-  </a>
-</div>
-<br>
-<br>
-<br>
-<br>
-<img src="Hand.jpeg" alt="test" width="150" class="center">
-<br>
-<br>
-<br>
-<br>
+  <header class="fixed-header" id="header">
+    <a href="#top">ULRICH KRISCHTAN</a>
+  </header>
 
-  <div class="header">
-    <a href="https://www.instagram.com/ulrichkrischtan" target="_blank">instagram</a><br>
-    <a href="bio.html">bio</a><br>
-    <a href="projects.html">projects</a>
-  </div>
+  <main class="main-content">
+    <div class="image-container">
+      <img src="Hand.jpeg" alt="Ulrich Krischtan">
+    </div>
 
-  <a href="impressum.html">impressum&datenschutz</a>
+    <nav class="nav-links">
+      <a href="bio.html">bio</a>
+      <a href="projects.html">projects</a>
+    </nav>
+  </main>
 
+    <a href="https://www.instagram.com/ulrichkrischtan" class="instagram">instagram</a>
+
+  <footer>
+    <a href="impressum.html">impressum&datenschutz</a>
+  </footer>
+
+  <script>
+    // Add subtle header effect on scroll
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
