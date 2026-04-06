@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ulrich Krischtan - Contact</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Fixed header */
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      z-index: 100;
+      padding: 15px 20px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .fixed-header a {
+      font-family: Helvetica, Arial, sans-serif;
+      text-decoration: none;
+      color: #fb3f00;
+      font-size: clamp(24px, 5vw, 50px);
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Main content */
+    .main-content {
+      margin-top: 100px;
+      max-width: 800px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page-title {
+      font-size: clamp(40px, 8vw, 90px);
+      text-align: center;
+      margin-bottom: 60px;
+      font-weight: bold;
+    }
+
+    .contact-info {
+      font-size: clamp(24px, 4vw, 36px);
+      line-height: 2;
+      text-align: center;
+    }
+
+    .contact-info a {
+      color: #000;
+      text-decoration: none;
+      transition: color 0.3s;
+      display: block;
+      margin: 20px 0;
+    }
+
+    .contact-info a:hover {
+      color: #fb3f00;
+    }
+
+    .contact-label {
+      font-size: clamp(18px, 3vw, 24px);
+      color: #666;
+      margin-bottom: 5px;
+      font-style: italic;
+    }
+
+    /* Back to home button */
+    .back-home {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: clamp(16px, 2vw, 24px);
+      text-decoration: none;
+      color: #fb3f00;
+      background: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      border: 2px solid #fb3f00;
+      transition: all 0.3s;
+      z-index: 90;
+    }
+
+    .back-home:hover {
+      background: #fb3f00;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(251, 63, 0, 0.3);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fb3f00;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .main-content {
+        margin-top: 80px;
+        padding: 15px;
+      }
+
+      .contact-info {
+        line-height: 1.8;
+      }
+
+      .back-home {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .fixed-header {
+        padding: 10px 15px;
+      }
+
+      .main-content {
+        margin-top: 70px;
+        padding: 10px;
+      }
+
+      .back-home {
+        font-size: 14px;
+        padding: 8px 14px;
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+/* Instagram button */
+    .instagram {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      font-size: clamp(16px, 2vw, 24px);
+      text-decoration: none;
+      color: #8a3ab9;
+      background: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      border: 2px solid #8a3ab9;
+      transition: all 0.3s;
+      z-index: 90;
+    }
+
+    .instagram:hover {
+      background: #8a3ab9;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(251, 63, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <header class="fixed-header">
+    <a href="index.html">ULRICH KRISCHTAN</a>
+  </header>
+
+  <main class="main-content">
+    <h1 class="page-title">CONTACT</h1>
+
+    <div class="contact-info">
+      <div class="contact-label">email</div>
+      <div>ulrich[at]krischtan.com</div>
+      
+      <div class="contact-label">phone</div>
+      <a href="tel:+4915754783645">+49 157 5478 3645</a>
+    </div>
+  </main>
+
+  <a href="https://www.instagram.com/ulrichkrischtan" class="instagram">instagram</a>
+
+  <a href="index.html" class="back-home">← back home</a>
+
+  <footer>
+    <a href="impressum.html">impressum&datenschutz</a>
+  </footer>
+</body>
+</html>

@@ -44,7 +44,7 @@
     /* Main content */
     .main-content {
       margin-top: 100px;
-      max-width: 1000px;
+      max-width: 1200px;
       width: 100%;
       margin-left: auto;
       margin-right: auto;
@@ -63,6 +63,35 @@
     .main-content p {
       text-align: justify;
     }
+
+    .page-title {
+      font-size: clamp(40px, 8vw, 90px);
+      text-align: center;
+      margin-bottom: 60px;
+      font-weight: bold;
+    }
+
+    .image-container {
+      width: 100%;
+      max-width: 400px;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .image-copyright {
+      font-size: 12px;
+      color: #999;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
 
     .bio-list {
       list-style: none;
@@ -173,8 +202,11 @@
   </header>
 
   <main class="main-content">
-    <h1>BIO</h1>
-    <br />
+    <h1 class="page-title">BIO</h1>
+        <div class="image-container">
+      <img src="000091310003.jpg" alt="Ulrich Krischtan">
+      <div class="image-copyright">© Jonathan Hein</div>
+    </div>
     <p>In third grade, and in front of a sold out cinema at an animation festival, Ulrich Krischtan asked a layout designer from Pixar worriedly if they were going to be able to finish the film while he was away, here at the festival. The layout designer laughed and told him there were many people working on the movie. Ulrich Krischtan knew that, but he was still worried. The movie was <i>Cars 2</i>, and it was finished in time.
     <br />
     <br />
