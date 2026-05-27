@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ulrich Krischtan - About</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      padding: 10px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Fixed header */
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      z-index: 100;
+      padding: 15px 20px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .fixed-header a {
+      font-family: Helvetica, Arial, sans-serif;
+      text-decoration: none;
+      color: #fb3f00;
+      font-size: clamp(24px, 5vw, 50px);
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Main content */
+    .main-content {
+      margin-top: 100px;
+      max-width: 1200px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      flex: 1;
+    }
+
+    .main-content p,
+    .main-content h1,
+    .main-content h2 {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .main-content p {
+      text-align: justify;
+    }
+
+    .page-title {
+      font-size: clamp(40px, 8vw, 90px);
+      text-align: center;
+      margin-bottom: 60px;
+      font-weight: bold;
+    }
+
+    .image-container {
+      width: 100%;
+      max-width: 400px;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .image-copyright {
+      font-size: 12px;
+      color: #999;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+
+    .bio-list {
+      list-style: none;
+      line-height: 1.5;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bio-list li {
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .bio-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #fb3f00;
+    }
+
+    .bio-list i {
+      font-style: italic;
+      color: #666;
+      font-size: 0.8em;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+        /* Back to top button */
+    .back-home {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: clamp(16px, 2vw, 24px);
+      text-decoration: none;
+      color: #fb3f00;
+      background: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      border: 2px solid #fb3f00;
+      transition: all 0.3s;
+      z-index: 90;
+    }
+
+    .back-home:hover {
+      background: #fb3f00;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(251, 63, 0, 0.3);
+    }
+
+    footer a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fb3f00;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .main-content {
+        margin-top: 80px;
+        padding: 15px;
+      }
+
+      .bio-list {
+        line-height: 1.4;
+      }
+
+      .bio-list li {
+        margin-bottom: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .fixed-header {
+        padding: 10px 15px;
+      }
+
+      .main-content {
+        margin-top: 70px;
+        padding: 10px;
+      }
+
+      .bio-list li {
+        margin-bottom: 12px;
+        padding-left: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="fixed-header">
+    <a href="index.html">ULRICH KRISCHTAN</a>
+  </header>
+
+  <main class="main-content">
+    <h1 class="page-title">ABOUT</h1>
+        <div class="image-container">
+      <img src="000091310003.jpg" alt="Ulrich Krischtan">
+      <div class="image-copyright">© Jonathan Hein</div>
+    </div>
+    <br />
+    <h1>BIO</h1>
+    <p>In third grade, and in front of a sold out cinema at an animation festival, Ulrich Krischtan asked a layout designer from Pixar worriedly if they were going to be able to finish the film while he was away, here at the festival. The layout designer laughed and told him there were many people working on the movie. Ulrich Krischtan knew that, but he was still worried. The movie was <i>Cars 2</i>, and it was finished in time.
+    <br />
+    <br />
+    If asked to name a favorite filmmaker, Ulrich Krischtan were probably and somewhat pretentiously to answer by naming Chantal Akerman. He hasn't even seen all that many films of hers.
+    <br />
+    <br />
+    Though he usually way too fast and carelessly, Ulrich Krischtan always needs to take a break after reading a story by Joy Williams, no matter how short that story might be. This is why he considers her to be his favorite author.
+    <br />
+    <br />
+    Recently, Ulrich Krischtan has been invovled in the production of various short films in different positions. Besides movies, he is also writing prose. More on his recent projects <a href="projects.html">here</a>.
+    </p>
+    <br />
+    <br />
+    <h1>AWARDS</h1>
+    <ul class="bio-list">
+    <li><b>Baumarkt (Feature)</b> SteinbrennerMüller Award - Pitch Award at <i>achtung berlin festival 2026</i></li>
+    </ul>
+    <br />
+    <br />
+    <h1>CV</h1>
+    <br />
+    <ul class="bio-list">
+      <li>*2001</li>
+      <li>Jungstudium Jazzposaune (Pre-Studies Jazz Trombone) <i>HMDK Stuttgart (2019-2020)</i></li>
+      <li>Philosophie/Sozialwissenschaften (Philosophy/Social Studies) <i>HU Berlin (2021-2024)</i></li>
+      <li>Drehbuch/Dramaturgie (Screenwriting) <i>Filmuni Babelsberg (seit/since 2024)</i></li>
+    </ul>
+
+<a href="index.html" class="back-home">← back home</a>
+
+  </main>
+
+  <footer>
+    <a href="impressum.html">impressum&datenschutz</a>
+  </footer>
+</body>
+</html>
