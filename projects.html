@@ -72,47 +72,42 @@
     }
 
     .section-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
       max-width: 900px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
     .project-card {
-      background: #f8f8f8;
-      padding: 30px;
-      border-radius: 8px;
-      transition: all 0.3s;
-      border: 2px solid transparent;
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 12px;
+      line-height: 1.5;
     }
 
-    .project-card:hover {
-      background: #fff;
-      border-color: #fb3f00;
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    .project-card::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #fb3f00;
     }
 
     .project-card a {
       color: #000;
       text-decoration: none;
-      display: block;
-      font-size: clamp(18px, 2.5vw, 24px);
+      font-size: clamp(16px, 2.2vw, 20px);
       font-weight: bold;
-      margin-bottom: 8px;
+    }
+
+    .project-card a:hover {
+      color: #fb3f00;
     }
 
     .project-card .venue {
+      display: inline;
+      margin-left: 8px;
       color: #666;
-      font-size: clamp(14px, 2vw, 18px);
+      font-size: clamp(14px, 1.8vw, 16px);
       font-style: italic;
-    }
-
-    .section-content i {
-      color: #666;
-      font-size: clamp(20px, 3vw, 30px);
     }
 
     /* Back to top button */
@@ -171,13 +166,7 @@
       }
 
       .section-content {
-        line-height: 1.6;
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .project-card {
-        padding: 25px;
+        padding: 0;
       }
 
       .back-home {
@@ -221,7 +210,7 @@
       <h2 class="section-title">film</h2>
       <div class="section-content">
         <div class="project-card">
-          <a href="baumarkt.html">Baumarkt (Short)</a>
+          <a href="baumarkt.html">Baumarkt (Short, 2026)</a>
           <div class="venue">Writer / Director / Producer</div>
         </div>
         <div class="project-card">
@@ -232,10 +221,22 @@
           <a href="https://www.crew-united.com/en/Mutprobe__369309.html" target="_blank">Mutprobe (Short, WT)</a>
           <div class="venue">Co-Writer with Tarah Stabe & Matilda de Sá, Director: Tarah Stabe</div>
         </div>
+        <div class="project-card">
+          <a href="https://www.crew-united.com/de/Mondnacht__376722.html" target="_blank">Mondnacht (Short, WT)</a>
+          <div class="venue">Co-Writer with Emma Kratt, Director: Emma Kratt</div>
+        </div>
       </div>    </section>
     <section class="section" id="TEXTE">
       <h2 class="section-title">text</h2>
       <div class="section-content">
+        <div class="project-card">
+          <a href="" target="_blank">Meine Tante</a>
+          <div class="venue">UND Heft (upcoming)</div>
+        </div>
+        <div class="project-card">
+          <a href="" target="_blank">Donnern</a>
+          <div class="venue">Literarische Blätter (2026)</div>
+        </div>
         <div class="project-card">
           <a href="https://www.literarische-blaetter.de/jahrgang-2026/maerz-2026/" target="_blank">Städtetrip</a>
           <div class="venue">Literarische Blätter (2026)</div>
